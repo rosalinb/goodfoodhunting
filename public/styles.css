@@ -1,0 +1,17 @@
+img {
+  width: 200px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.ui-card {
+  border: 1px solid purple;
+}
+
+.ui-card img {
+  width: 100%;
+}

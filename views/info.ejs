@@ -1,0 +1,22 @@
+<h1>dish details</h1>
+
+<p>title: <%= dish.title %></p>
+
+<p>image</p>
+
+<img src="<%= dish.image_url %>" alt="">
+
+<p>description</p>
+
+<p><%= dish.description %></p>
+
+
+<% if (dish.user_id === currentUser.id) { %>
+
+<form action="/dishes/<%= dish.id %>?_method=delete" method="post">
+  <button>delete</button>
+</form>
+
+<% } %>
+
+<a href="/dishes/<%= dish.id %>/edit">edit dish</a>

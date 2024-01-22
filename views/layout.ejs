@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <% if (isLoggedIn) { %>
+
+    <p>welcome back <%= currentUser.email %>!</p>
+
+    <form action="/logout?_method=delete" method="post">
+      <button>logout</button>
+    </form>
+
+
+  <% } else { %>  
+
+  <p>
+    <a href="/login">login</a>
+  </p>
+
+  <% } %>
+
+
+
+  <a href="/dishes/new">share a dish</a>
+
+  <h1>goodfoodhunting</h1>
+
+
+  <%-body%>
+  
+</body>
+</html>
